@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import UseToggleComponent from "./components/UseToggleComponent";
+
 const StyledParentContainer = styled.div`
   background-color: #282c34;
   min-height: 100vh;
@@ -13,7 +15,11 @@ const StyledParentContainer = styled.div`
 `;
 
 function App() {
-  return <StyledParentContainer>Hello</StyledParentContainer>;
+  return (
+    <StyledParentContainer>
+      <UseToggleComponent />
+    </StyledParentContainer>
+  );
 }
 
 export default App;
