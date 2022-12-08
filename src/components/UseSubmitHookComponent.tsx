@@ -1,21 +1,24 @@
-import { useState } from "react";
+import useSubmit from "../hooks/useSubmit";
 import { Card, StyledButton } from "../styles/CommonStyles";
 
 const UseSubmitHookComponent = () => {
-  const [state, setState] = useState(false);
-
-  const submitHandler = () => {
-    setState(true);
-    setTimeout(() => {
-      setState(false);
-    }, 3500);
+  const mySubmitFunction = () => {
+    return new Promise((resolve: any, reject) => {
+      setTimeout(() => {
+        const rnd = Math.random() * 10;
+        rnd <= 1 ? resolve() : reject("Error occurred!");
+      }, 2000);
+    });
   };
+  const [handleSubmit, isLoading, error] = useSubmit(mySubmitFunction);
   return (
     <Card>
       <h3>UseSubmit</h3>
-      <StyledButton onClick={submitHandler} disabled={state}>
-        Submit
+
+      <StyledButton onClick={handleSubmit} disabled={isLoading}>
+        {!isLoading ? "Click me" : "Loading..."}
       </StyledButton>
+      {error ? <p>{error}</p> : null}
     </Card>
   );
 };
