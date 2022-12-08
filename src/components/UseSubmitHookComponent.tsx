@@ -3,10 +3,10 @@ import { Card, StyledButton } from "../styles/CommonStyles";
 
 const UseSubmitHookComponent = () => {
   const mySubmitFunction = () => {
-    return new Promise((resolve: any, reject) => {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
         const rnd = Math.random() * 10;
-        rnd <= 1 ? resolve() : reject("Error occurred!");
+        rnd <= 1 ? resolve("data") : reject("Error occurred!");
       }, 2000);
     });
   };
