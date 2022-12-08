@@ -14,3 +14,13 @@ export const Card = styled.div`
     text-decoration: underline;
   }
 `;
+
+export const StyledButton = styled.button`
+  background: grey;
+  padding: 6px;
+  font-size: 13px;
+  font-weight: 900;
+  border-radius: 10px;
+  text-transform: uppercase;
+  outline: none;
+`;
