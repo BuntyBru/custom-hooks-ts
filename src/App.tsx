@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import UseMemoCompareComponent from "./components/UseMemoCompareComponent";
 
 import UseToggleComponent from "./components/UseToggleComponent";
 
@@ -18,6 +19,7 @@ function App() {
   return (
     <StyledParentContainer>
       <UseToggleComponent />
+      <UseMemoCompareComponent />
     </StyledParentContainer>
   );
 }
