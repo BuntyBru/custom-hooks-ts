@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import UseToggleComponent from "./components/UseToggleComponent";
 import UseSubmitHookComponent from "./components/UseSubmitHookComponent";
+import UseDebounceComponent from "./components/UseDebounceComponent";
 
 const StyledParentContainer = styled.div`
   background-color: #282c34;
@@ -20,6 +21,7 @@ function App() {
     <StyledParentContainer>
       <UseToggleComponent />
       <UseSubmitHookComponent />
+      <UseDebounceComponent />
     </StyledParentContainer>
   );
 }
