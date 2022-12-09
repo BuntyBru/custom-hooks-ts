@@ -5,6 +5,7 @@ import UseToggleComponent from "./components/UseToggleComponent";
 import UseSubmitHookComponent from "./components/UseSubmitHookComponent";
 import UseDebounceComponent from "./components/UseDebounceComponent";
 import UseOnScreenComponent from "./components/UseOnScreenComponent";
+import UsePreviousComponent from "./components/UsePreviousComponent";
 
 const StyledParentContainer = styled.div`
   background-color: #282c34;
@@ -24,6 +25,7 @@ function App() {
       <UseSubmitHookComponent />
       <UseDebounceComponent />
       <UseOnScreenComponent />
+      <UsePreviousComponent />
     </StyledParentContainer>
   );
 }
